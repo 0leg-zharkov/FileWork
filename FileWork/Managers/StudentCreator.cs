@@ -1,10 +1,7 @@
 ﻿using System;
-using System.CodeDom;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FileWork.DataCreators;
 
 namespace FileWork.Managers
@@ -55,7 +52,7 @@ namespace FileWork.Managers
                     amount = random.Next(surnames.Count, names.Count - 1);
                 }
             }
-            else amount = random.Next(3, 6); //скучный вариант
+            else amount = random.Next(3, 7); //скучный вариант
             return amount;
         }
 

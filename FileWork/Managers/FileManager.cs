@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace FileWork.Managers
 {
@@ -26,7 +22,6 @@ namespace FileWork.Managers
             {
                 fileInfo = new FileInfo(path);
                 isFileCreated = true;
-                Console.WriteLine("Метод CreateFile(), файл создан");
             }
             catch (Exception ex)
             {
@@ -55,7 +50,7 @@ namespace FileWork.Managers
 
                     // Пример, если я оказался не прав:
                     //foreach (string s in strokes) writer.WriteLine(s + "\n");
-                    // В таком случае надо должны быть чуток поправлены методы ниже
+                    // В таком случае должны быть чуток поправлены методы ниже
                 }
             }
         }
@@ -88,11 +83,7 @@ namespace FileWork.Managers
                 using (StreamReader reader = new StreamReader(path))
                 {
                     string line;
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        strokes.Add(line);
-                        Console.WriteLine(line);
-                    }
+                    while ((line = reader.ReadLine()) != null) strokes.Add(line);
                 }
             }
 
